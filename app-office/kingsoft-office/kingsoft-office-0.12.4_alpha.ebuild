@@ -16,6 +16,7 @@ SLOT="alpha"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
+# TODO: Include list of needed libraries
 DEPEND="media-fonts/symbolfonts"
 RDEPEND="${DEPEND}"
 
