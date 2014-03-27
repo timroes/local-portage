@@ -21,12 +21,17 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${FN}"
 
+dir="/opt/kingsoft-office-${SLOT}"
+wps_exe="wps"
+wpp_exe="wpp"
+et_exe="et"
+
+QA_PREBUILT="${dir}/office6/*.so*
+${dir}/office6/${wps_exe}
+${dir}/office6/${wpp_exe}
+${dir}/office6/${et_exe}"
+
 src_install() {
-	local dir="/opt/kingsoft-office-${SLOT}"
-	local wps_exe="wps"
-	local wpp_exe="wpp"
-	local et_exe="et"
-	
 	insinto "${dir}"
 	doins -r *
 
