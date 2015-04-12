@@ -7,7 +7,7 @@ inherit eutils
 
 DESCRIPTION="Eclipse Memory Analyzer can be used to view Heapdumps of Java programs"
 HOMEPAGE="http://www.eclipse.org/mat/"
-SRC_URI="http://www.eclipse.org/downloads/download.php?file=/mat/1.3.0/rcp/MemoryAnalyzer-1.3.0.20130517-linux.gtk.x86_64.zip&r=1 -> ${P}.zip"
+SRC_URI="http://www.eclipse.org/downloads/download.php?file=/mat/1.4/rcp/MemoryAnalyzer-1.4.0.20140604-linux.gtk.x86_64.zip&r=1 -> ${P}.zip"
 
 LICENSE="EPL 1.0"
 SLOT="0"
@@ -25,5 +25,5 @@ src_install() {
 
 	fperms 755 "${dir}/MemoryAnalyzer"
 
-	make_desktop_entry "${dir}/MemoryAnalyzer" "Memory Analyzer (MAT)" "" "Development"
+	make_wrapper "MemoryAnalyzer" "${dir}/MemoryAnalyzer -data \"\$HOME/.config/eclipse-mat\""
 }
