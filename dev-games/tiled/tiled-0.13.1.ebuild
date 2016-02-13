@@ -5,7 +5,7 @@
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-inherit fdo-mime python-single-r1 qt5-build qmake-utils
+inherit fdo-mime python-single-r1 qmake-utils
 
 DESCRIPTION="A general purpose tile map editor"
 HOMEPAGE="http://www.mapeditor.org/"
